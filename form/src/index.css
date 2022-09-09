@@ -46,7 +46,17 @@ body{
 }
 
 .input1{
-  width: 45%;
+  width: 93%;
+  padding: 20px 5px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #b39b9b;
+  outline: none;
+  margin-right: 3%;
+}
+
+.input2{
+  width: 93%;
   padding: 20px 5px;
   display: inline-block;
   margin-bottom: 20px;
@@ -65,8 +75,8 @@ body{
 }
 
 .form__message{
-  max-width: 100%;
-  min-width: 100%;
+  max-width: 93%;
+  min-width: 93%;
   min-height: 150px;
   max-height: 150px;
 }
