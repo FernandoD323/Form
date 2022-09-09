@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Form from './Form'
+import FormApp from './FormApp'
+import { BrowserRouter } from 'react-router-dom';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Form />
+    <BrowserRouter>  
+    <FormApp />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

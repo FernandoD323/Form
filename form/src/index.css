@@ -18,15 +18,15 @@ body {
 body{
   font-family: 'Raleway', sans-serif;
   min-height: 100vh;
-
+  background-image: url(./assets/1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .form{
-  width: 70rem;
+  width: 90%;
   background: #fff;
-  margin: 70px auto;
+  margin: 50px 70px auto;
   padding: 30px 20px 40px ;
   text-align: center;
   border-radius: 8px;;
@@ -40,7 +40,7 @@ body{
   padding: 20px 5px;
   display: inline-block;
   margin-bottom: 20px;
-  border: 1px solid #b39b9b;
+  border: 1px solid #e2e4f0;
   outline: none;
   margin-right: 3%;
 }
@@ -50,27 +50,19 @@ body{
   padding: 20px 5px;
   display: inline-block;
   margin-bottom: 20px;
-  border: 1px solid #b39b9b;
+  border: 1px solid #e2e4f0;
   outline: none;
   margin-right: 3%;
 }
 
-.input2{
-  width: 93%;
-  padding: 20px 5px;
-  display: inline-block;
-  margin-bottom: 20px;
-  border: 1px solid #b39b9b;
-  outline: none;
-  margin-right: 3%;
-}
+
 
 .input, .form__submit{
   font-family: inherit;
 }
 
 .form__title{
-  margin-bottom: 40px;
+  margin-bottom: 12px;
   font-size: 2rem;
 }
 
@@ -95,10 +87,44 @@ body{
 }
 
 .form__submit:hover{
-  background-image: linear-gradient(135deg, #667eea86 0%, #764ba28e 100%);;
+  background-image: linear-gradient(135deg, #ff000086 0%, #7a03f0 100%);;
 }
 
 .title{
-  margin: 4% 0 0 35%;
+  color: #fff;
+  margin-left: 35px;
+}
 
+.text__area{
+  font-size: 14px;
+}
+
+
+.conteiner{
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+nav{
+  height: 70px;
+  background: #8d8d90;
+}
+
+.nav-content{
+  height: 100%;
+  align-items: center;
+}
+
+.links{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin-left: 120px;
+}
+
+.form__hr{
+  margin: 12px 25% 38px 25%;
+    
 }
