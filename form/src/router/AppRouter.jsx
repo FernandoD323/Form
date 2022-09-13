@@ -1,5 +1,6 @@
 
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { Answers } from '../pages/Answers'
 import { NavBar } from '../pages/NavBar'
 import { PageStep1 } from '../pages/PageStep1'
 import { PageStep2 } from '../pages/PageStep2'
@@ -18,6 +19,7 @@ export const AppRouter = () => {
         <Route path="step3" element={<PageStep3 />} />
         <Route path="step4" element={<PageStep4 />} />
         <Route path="step5" element={<PageStep5 />} />
+        <Route path="answers" element={<Answers />} />
       </Routes>
 
     </>

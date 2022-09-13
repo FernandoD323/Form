@@ -5,7 +5,7 @@ export const NavBar = () => {
   return (
     <header>
     <nav>
-        <div class="conteiner nav-content">
+        <div class="conteiner nav-conteiner">
         <h1 className='title'>Estudio Socio Económico |</h1>
         <NavLink to="/step1" className="links"> Paso 1 </NavLink>
         <NavLink to="/step2" className="links"> Paso 2 </NavLink>

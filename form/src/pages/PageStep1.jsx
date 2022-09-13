@@ -1,20 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { UserContext } from '../context/UserContext';
+import { useForm } from '../hooks/useForm';
 
-export const PageStep1 = () => {
+export const PageStep1 = ({children}) => {
+
+const [name, setName] = useState()
+
+  const { names, surnames, onInputChange } = useForm({
+    names: '',
+    surnames: ''
+});
+
+const onSubmit = (event) => {
+    event.preventDefault();
+    if (names.trim().length <= 1) return;
+
+    console.log(names)
+    setName(names)
+    
+}
+
+
   return (
     <>
- 
-    <form class="form img1">
+    <UserContext.Provider  value={{hola:'mundo'}}>
+      {children}
+    </UserContext.Provider>
+
+      <h1>{name}</h1>ss
+    <form onSubmit={onSubmit} class="form img1">
          <h2 class="form__title">- Datos Personales - </h2>
          <hr className='form__hr' />
-         <input type="text" class=" input" placeholder="Nombres:"/>
-         <input type="text" class=" input" placeholder="Apellidos:"/>
-         <input type="text" class=" input" placeholder="Correo:"/>
-         <input type="text" class=" input" placeholder="Teléfono:"/>
-         <input type="text" class=" input" placeholder="Dirección:"/>
-         <input type="text" class=" input" placeholder="Carnet:"/>
-         <input type="text" class=" input1" placeholder="Tutor legal/Encargad@:"/>
-         <input type="submit" value="Siguiente" class="form__submit"/> 
+         <input type="text" className="input" placeholder="Nombres:" value={names} onChange={onInputChange} name="names"/>
+         <input type="text" className=" input" placeholder="Apellidos:" value={surnames} onChange={onInputChange} name="surnames"/>
+         <input type="text" className=" input" placeholder="Correo:"/>
+         <input type="text" className=" input" placeholder="Teléfono:"/>
+         <input type="text" className=" input" placeholder="Dirección:"/>
+         <input type="text" className=" input" placeholder="Carnet:"/>
+         <input type="text" className=" input1" placeholder="Tutor legal/Encargad@:"/>
+         
+         <button onClick={onSubmit}> AJNFOQINFOIEQNF</button>
+         <Link to="/step2" className="form__submit">Siguiente</Link> 
      </form>
     
  

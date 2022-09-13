@@ -84,6 +84,7 @@ body{
   font-weight: 700;
   cursor: pointer;
   margin-right: 5%;
+  text-decoration: none;
 }
 
 .form__submit:hover{
@@ -112,7 +113,7 @@ nav{
   background: #8d8d90;
 }
 
-.nav-content{
+.nav-conteiner{
   height: 100%;
   align-items: center;
 }
