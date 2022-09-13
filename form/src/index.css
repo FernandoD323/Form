@@ -129,3 +129,70 @@ nav{
   margin: 12px 25% 38px 25%;
     
 }
+
+@media screen and (max-width:799px){
+  body{
+      padding: 60px 0;
+      background-repeat: no-repeat;
+  }
+
+  .form{
+      margin: 0 auto;
+      height: 80%;
+  }
+
+
+  nav{
+    height: 80px;
+    background: #8d8d90;
+    margin-bottom: 2%;
+  }
+  
+  .nav-conteiner{
+    height: 40%;
+    align-items: center;
+  }
+  
+  .links{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 20px;
+    
+  }
+
+  .title{
+    color: #fff;
+    margin-left: 35px;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width:600px){
+
+  body{
+      padding: 40px 0;
+  }
+
+  .form{
+      width: 80%;
+  }
+
+  .form__title{
+      font-size: 1.5rem;
+  }
+
+  .form__submit{
+      font-size: 12px;
+      width: 40%;
+  }
+
+  .input1{
+    font-size: 9px;
+  }
+  .input{
+    font-size: 9px;
+  }
+ 
+}

@@ -1,15 +1,21 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { UserContext } from '../context/UserContext';
 import { useForm } from '../hooks/useForm';
 
-export const PageStep1 = ({children}) => {
+export const PageStep1 = ({}) => {
 
 const [name, setName] = useState()
 
-  const { names, surnames, onInputChange } = useForm({
+  const { names, surnames,email,phone,address,DPI, tutor, onInputChange } = useForm({
     names: '',
-    surnames: ''
+    surnames: '',
+    email: '',
+    phone: '',
+    address: '',
+    DPI: '',
+    tutor: ''
+
+
 });
 
 const onSubmit = (event) => {
@@ -24,23 +30,18 @@ const onSubmit = (event) => {
 
   return (
     <>
-    <UserContext.Provider  value={{hola:'mundo'}}>
-      {children}
-    </UserContext.Provider>
-
-      <h1>{name}</h1>ss
+      <h1>{name}</h1>
     <form onSubmit={onSubmit} class="form img1">
          <h2 class="form__title">- Datos Personales - </h2>
          <hr className='form__hr' />
          <input type="text" className="input" placeholder="Nombres:" value={names} onChange={onInputChange} name="names"/>
          <input type="text" className=" input" placeholder="Apellidos:" value={surnames} onChange={onInputChange} name="surnames"/>
-         <input type="text" className=" input" placeholder="Correo:"/>
-         <input type="text" className=" input" placeholder="Teléfono:"/>
-         <input type="text" className=" input" placeholder="Dirección:"/>
-         <input type="text" className=" input" placeholder="Carnet:"/>
-         <input type="text" className=" input1" placeholder="Tutor legal/Encargad@:"/>
-         
-         <button onClick={onSubmit}> AJNFOQINFOIEQNF</button>
+         <input type="text" className=" input" placeholder="Correo:" value={email} onChange={onInputChange} name="email"/>
+         <input type="text" className=" input" placeholder="Teléfono:" value={phone} onChange={onInputChange} name="phone"/>
+         <input type="text" className=" input" placeholder="Dirección:" value={address} onChange={onInputChange} name="address"/>
+         <input type="text" className=" input" placeholder="DPI:" value={DPI} onChange={onInputChange} name="DPI"/>
+         <input type="text" className=" input1" placeholder="Tutor legal/Encargad@:" value={tutor} onChange={onInputChange} name="tutor"/>
+        
          <Link to="/step2" className="form__submit">Siguiente</Link> 
      </form>
     
