@@ -15,6 +15,9 @@ body {
   box-sizing: border-box;
 }
 
+h1{
+  color: rgb(59, 0, 253);
+}
 body{
   font-family: 'Raleway', sans-serif;
   min-height: 100vh;
@@ -132,7 +135,7 @@ nav{
 
 @media screen and (max-width:799px){
   body{
-      padding: 60px 0;
+      padding: 0px 0;
       background-repeat: no-repeat;
   }
 
@@ -169,10 +172,10 @@ nav{
 
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:650px){
 
   body{
-      padding: 40px 0;
+      padding: 0px 0;
   }
 
   .form{
@@ -193,6 +196,22 @@ nav{
   }
   .input{
     font-size: 9px;
+  }
+
+  .nav-conteiner{
+    height: 80%;
+    align-items: center;
+  }
+  
+  .links{
+    margin-left: 20px;
+    
+  }
+
+  .title{
+    color: #fff;
+    margin-left: 20px;
+    font-size: 18px;
   }
  
 }
