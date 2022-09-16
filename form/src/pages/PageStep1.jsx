@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
-import swal from 'sweetalert2'
+import { TextField } from '@mui/material';
+
 export const PageStep1 = ({ dataUser, setDataUser }) => {
 
 
@@ -19,12 +20,6 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    if (names.trim().length <= 1) {swal.fire({
-      icon: 'error',
-      title: 'Oops...',
-      text: 'Something went wrong!',
-      footer: '<a href="">Why do I have this issue?</a>'
-    });}
     setDataUser(() => ({
       names: names,
       surnames: surnames,
@@ -38,65 +33,125 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
   }
 
 
+
+  const [errorMessageName, setErrorMessageName] = useState("");
+  const [errorMessageEmail, setErrorMessageEmail] = useState("");
+  const [errorMessageDirection, setErrorMessageDirection] = useState("")
+
+  const [validName, setValidName] = useState(false)
+  const [validEmail, setValidEmail] = useState(false)
+  const [validDirection, setValidDirection] = useState(false)
+
+
   return (
     <>
 
       <form onSubmit={onSubmit} class="form img1">
         <h2 class="form__title">- Datos Personales - </h2>
         <hr className='form__hr' />
-        <input type="text"
-          className="input"
-          placeholder="Nombres:"
-          value={dataUser.names}
-          onChange={(event) => setDataUser({ ...dataUser, names: event.target.value })}
-          name="names"
-          
-          
-          />
 
-        <input type="text"
+
+
+        <TextField item sx={{ mb: 2,mr:4}}
+          type="text"
+          label="Nombres"
+          className="input"
+          value={dataUser.names}
+          onChange={(event) => {
+            setDataUser({ ...dataUser, names: event.target.value })
+            if (dataUser.names.length <= 1) {
+              setErrorMessageName("Este parámetro es obligatorio y debe de contener más de 3 caracteres")
+              setValidName(true)
+            } else {
+              setErrorMessageName("")
+              setValidName(false)
+            }
+          }
+          }
+          name="names"
+          error={validName}
+          helperText={errorMessageName}
+        />
+
+
+        <TextField
+          label="Apellidos"
+          type="text"
           className=" input"
-          placeholder="Apellidos:"
+
           value={dataUser.surnames}
           onChange={(event) => setDataUser({ ...dataUser, surnames: event.target.value })}
           name="surnames" />
 
 
-        <input type="text"
+        <TextField item sx={{ mb: 2,mr:4 }}
+          label="Correo"
+          type="text"
           className=" input"
-          placeholder="Correo:"
-          value={dataUser.email}
-          onChange={(event) => setDataUser({ ...dataUser, email: event.target.value })}
-          name="email" />
 
-        <input type="text"
+          value={dataUser.email}
+          onChange={(event) => {
+            setDataUser({ ...dataUser, email: event.target.value })
+            if (dataUser.email.length <= 1) {
+              setErrorMessageEmail("Este parámetro es obligatorio y debe de contener más de 3 caracteres")
+              setValidEmail(true)
+            } else {
+              setErrorMessageEmail("")
+              setValidEmail(false)
+            }
+          }
+          }
+          error={validEmail}
+          helperText={errorMessageEmail}
+        />
+
+        <TextField
+          label="Teléfono"
+          type="text"
           className=" input"
-          placeholder="Teléfono:"
+          
           value={dataUser.phone}
           onChange={(event) => setDataUser({ ...dataUser, phone: event.target.value })}
           name="phone" />
 
-        <input type="text"
+        <TextField item sx={{ mb: 2,mr:4 }}
+          label="Dirección"
+          type="text"
           className=" input"
-          placeholder="Dirección:"
+          
           value={dataUser.address}
-          onChange={(event) => setDataUser({ ...dataUser, address: event.target.value })}
+          onChange={(event) => {
+            setDataUser({ ...dataUser, address: event.target.value })
+            if (dataUser.address.length <= 1) {
+              setErrorMessageDirection("Este parámetro es obligatorio y debe de contener más de 3 caracteres")
+              setValidDirection(true)
+            } else {
+              setErrorMessageDirection("")
+              setValidDirection(false)
+            }
+          }
+          }
+          error={validDirection}
+          helperText={errorMessageDirection}
           name="address" />
 
-        <input
+        <TextField
+          label="DPI"
           type="text"
           className="input"
-          placeholder="DPI:"
+         
           value={dataUser.DPI} onChange={(event) => setDataUser({ ...dataUser, DPI: event.target.value })}
           name="DPI" />
 
-        <input type="text"
+        <TextField item sx={{ mb: 3 }}
+          label="Tutor legal/Encargad@"
+          type="text"
           className=" input1"
-          placeholder="Tutor legal/Encargad@:"
+          
           value={dataUser.tutor} onChange={(event) => setDataUser({ ...dataUser, tutor: event.target.value })}
           name="tutor" />
 
-        <button  onClick={onSubmit}> Hola</button>
+
         <Link to="/step2" type='submit' className="form__submit">Siguiente</Link>
       </form>
 

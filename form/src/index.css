@@ -27,6 +27,7 @@ body{
 }
 
 .form{
+  
   width: 90%;
   background: #fff;
   margin: 50px 70px auto;
@@ -46,6 +47,8 @@ body{
   border: 1px solid #e2e4f0;
   outline: none;
   margin-right: 3%;
+  flex-wrap: wrap;
+  
 }
 
 .input1{
@@ -56,8 +59,8 @@ body{
   border: 1px solid #e2e4f0;
   outline: none;
   margin-right: 3%;
+  
 }
-
 
 
 .input, .form__submit{
@@ -69,12 +72,7 @@ body{
   font-size: 2rem;
 }
 
-.form__message{
-  max-width: 93%;
-  min-width: 93%;
-  min-height: 150px;
-  max-height: 150px;
-}
+
 
 .form__submit{
   display: inline-block;
@@ -99,11 +97,15 @@ body{
   margin-left: 35px;
 }
 
-.text__area{
-  font-size: 14px;
+.form__texto{
+  font-size: 17px;
+  margin-bottom: 30px;
 }
 
 
+h3{
+  margin-top: 10px;
+}
 .conteiner{
   width: 100%;
   margin: 0 auto;
@@ -121,6 +123,7 @@ nav{
   align-items: center;
 }
 
+
 .links{
   text-decoration: none;
   color: #fff;
@@ -129,50 +132,11 @@ nav{
 }
 
 .form__hr{
-  margin: 12px 25% 38px 25%;
+  margin: 12px 25% 30px 25%;
     
 }
 
-@media screen and (max-width:799px){
-  body{
-      padding: 0px 0;
-      background-repeat: no-repeat;
-  }
-
-  .form{
-      margin: 0 auto;
-      height: 80%;
-  }
-
-
-  nav{
-    height: 80px;
-    background: #8d8d90;
-    margin-bottom: 2%;
-  }
-  
-  .nav-conteiner{
-    height: 40%;
-    align-items: center;
-  }
-  
-  .links{
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    margin-left: 20px;
-    
-  }
-
-  .title{
-    color: #fff;
-    margin-left: 35px;
-    font-size: 20px;
-  }
-
-}
-
-@media screen and (max-width:650px){
+@media screen and (max-width:800px){
 
   body{
       padding: 0px 0;
@@ -204,14 +168,134 @@ nav{
   }
   
   .links{
-    margin-left: 20px;
+    margin-left: 35px;
     
   }
 
   .title{
     color: #fff;
     margin-left: 20px;
-    font-size: 18px;
+    font-size: 20px;
   }
  
+}
+
+@media screen and (max-width:1200px){
+  
+  .links{
+    margin-left: 105px;
+    
+  }
+
+ 
+ 
+}
+
+@media screen and (max-width:1123px){
+  
+  .links{
+    margin-left: 80px;
+    
+  }
+}
+
+@media screen and (max-width:1026px){
+  
+  .links{
+    margin-left: 55px;
+    
+  }
+}
+
+@media screen and (max-width:875px){
+  
+  .links{
+    margin-left: 35px;
+    
+  }
+}
+
+
+@media screen and (max-width:700px){
+  
+  .links{
+    margin-left: 20px;
+    
+  }
+}
+
+@media screen and (max-width:450px){
+  
+  body{
+    padding: 0px 0;
+}
+
+
+
+.form__title{
+    font-size: 1.5rem;
+}
+
+.form__submit{
+    font-size: 12px;
+    width: 40%;
+}
+
+.input{
+  width: 40%;
+  padding: 10px 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid #e2e4f0;
+  outline: none;
+  margin-right: 3%;
+  flex-wrap: wrap;
+  
+}
+
+.nav-conteiner{
+  height: 80%;
+  align-items: center;
+}
+
+.links{
+ 
+  font-size: 13px;
+  margin: 15px;
+  
+}
+
+.title{
+  color: #fff;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
+.form{
+  width: 70%;
+}
+
+}
+
+
+
+
+@media screen and (max-width:376px){
+  
+  .links{
+    margin-left: 10px;
+    
+  }
+  .title{
+    color: #fff;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .form__submit{
+    font-size: 8px;
+    width: 40%;
+}
+.form__title{
+  font-size: 1rem;
+}
 }
