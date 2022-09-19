@@ -68,3 +68,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+###  `Form
+
+En este pequeña aplicación podrás simular lo que es un estudio socioeconómico normal, en donde se te pediran llenar
+ciertos campos que recopilaran tu información. 

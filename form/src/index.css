@@ -299,3 +299,30 @@ nav{
   font-size: 1rem;
 }
 }
+
+
+@media screen and (max-width:321px){
+  
+  .links{
+    margin-left: 15px;
+    font-size: 9px;
+    
+  }
+  .title{
+    color: #fff;
+    margin-left: 8px;
+    font-size: 9px;
+  }
+  .form__submit{
+    font-size: 8px;
+    width: 50%;
+    margin-bottom: 3px;
+}
+
+.form{
+  
+  margin: 20px  auto;
+  
+  
+}
+}
