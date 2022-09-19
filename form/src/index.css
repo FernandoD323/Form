@@ -31,6 +31,20 @@ body{
   width: 90%;
   background: #fff;
   margin: 50px 70px auto;
+  margin-bottom: 50px;
+  padding: 30px 20px 40px ;
+  text-align: center;
+  border-radius: 8px;;
+  box-shadow:  6px 6px 10px rgba(0, 0, 0, 0.336);
+  overflow: hidden;
+  
+}
+
+.form__home{
+  
+  width: 50%;
+  background: #fff;
+  margin: 80px auto;
   padding: 30px 20px 40px ;
   text-align: center;
   border-radius: 8px;;
@@ -78,7 +92,7 @@ body{
   display: inline-block;
   width: 30%;
   font-size: 18px;
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);;
+  background-image: linear-gradient(135deg, #f87c7c 0%, #ffbc85 100%);;
   padding: 15px 30px;
   border: none;
   color: #fff;
@@ -89,7 +103,29 @@ body{
 }
 
 .form__submit:hover{
-  background-image: linear-gradient(135deg, #ff000086 0%, #7a03f0 100%);;
+  background: #FF512F;  
+  background: -webkit-linear-gradient(to right, #dd2477e2, #ff522fdf);  
+  background: linear-gradient(to right, #dd2477e0, #ff522fd6); 
+  
+}
+
+.form__submit-home{
+  display: inline-block;
+  width: 45%;
+  font-size: 18px;
+  background-image: linear-gradient(135deg, #ffadad 0%, #ffbc85 100%);;
+  padding: 15px 30px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.form__submit-home:hover{
+  background: #FF512F; 
+  background: -webkit-linear-gradient(to right, #dd2477e2, #ff522fdf);
+  background: linear-gradient(to right, #dd2477e0, #ff522fd6);  
 }
 
 .title{
@@ -129,6 +165,7 @@ nav{
   color: #fff;
   display: inline-block;
   margin-left: 120px;
+  text-align: center;
 }
 
 .form__hr{
@@ -197,12 +234,22 @@ nav{
     margin-left: 80px;
     
   }
+  
 }
 
 @media screen and (max-width:1026px){
   
   .links{
-    margin-left: 55px;
+    margin-left: 45px;
+    
+  }
+
+  .form{
+
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
     
   }
 }
@@ -215,12 +262,44 @@ nav{
   }
 }
 
+@media screen and (max-width:769px){
+  
+  .links{
+    margin-left: 36px;
+    font-size: 14px;
+    
+  }
+  .title{
+    margin-left: 10px;
+    font-size: 15px;
+  }
+
+  h3{
+    font-size: 17px;
+  }
+  .paragrah{
+    font-size: 17px;
+  }
+}
 
 @media screen and (max-width:700px){
   
   .links{
     margin-left: 20px;
     
+  }
+
+  .form{
+    width: 90%;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    padding: 30px 20px 40px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px rgb(0 0 0 / 34%);
+    overflow: hidden;
   }
 }
 
@@ -239,6 +318,7 @@ nav{
 .form__submit{
     font-size: 12px;
     width: 40%;
+    margin-left: 10px;
 }
 
 .input{
@@ -324,5 +404,150 @@ nav{
   margin: 20px  auto;
   
   
+}}
+
+
+@media screen and (max-width:426px){
+  
+  .links{
+    margin-left: 10px;
+    font-size: 11px;
+    
+  }
+  .title{
+    color: #fff;
+    margin-left: 6px;
+    font-size: 11px;
+  }
+  .form__submit{
+    font-size: 12px;
+    width: 40%;
+    margin-bottom: 3px;
 }
+
+.form__home {
+  width: 65%;
+  background: #fff;
+  margin: 35px auto;
+  padding: 30px 20px 40px;
+}
+
+
+.form__submit-home{
+
+  width: 50%;
+  font-size: 18px;
+ 
+}
+
+}
+
+
+@media screen and (max-width:376px){
+  
+  .links{
+    margin-left: 5px;
+    font-size: 9px;
+    
+  }
+  
+  .form__submit{
+    font-size: 12px;
+    width: 35%;
+    padding: 15px 15px 15px 13px;
+    
+}
+
+
+
+.form__submit-home{
+
+  width: 60%;
+  font-size: 15px;
+  padding: 15px 30px;
+  
+ 
+}
+
+.form__title{
+
+  font-size: 1.3rem;
+}
+
+}
+
+
+
+@media screen and (max-width:321px){
+  
+  .links{
+    margin-left: -3px ;
+    font-size: 9px;
+    
+  }
+
+  .title{
+
+    margin-left: 1px;
+    font-size: 10px;
+  }
+  
+  .form__submit{
+    font-size: 12px;
+    width: 38%;
+    padding: 15px 10px 15px 10px;
+    
+}
+
+
+
+.form__submit-home{
+
+  width: 60%;
+  font-size: 15px;
+  padding: 15px 15px 15px 20px;
+  
+ 
+}
+
+.form__home {
+  width: 75%;
+  background: #fff;
+  margin: 35px auto;
+  padding: 30px 20px 40px;
+}
+
+.form__title{
+  font-size: 1.1rem;
+}
+
+.paragrah{
+  font-size: 1rem;
+}
+.form__texto{
+  font-size: 0.9rem;
+}
+
+h3{
+  font-size: 0.9rem;
+}
+
+.form{
+  width: 75%;
+}
+
+}
+
+
+
+@media screen and (max-width:1281px){
+  
+  .links{
+    margin-left: 90px;
+ 
+    
+  }
+
+  
+
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
 import { TextField } from '@mui/material';
 
-export const PageStep1 = ({ dataUser, setDataUser }) => {
+export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
 
 
   const { names, surnames, email, phone, address, DPI, tutor } = useForm({
@@ -18,19 +18,6 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
 
   });
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-    setDataUser(() => ({
-      names: names,
-      surnames: surnames,
-      email: email,
-      phone: phone,
-      address: address,
-      DPI: DPI,
-      tutor: tutor,
-    }))
-
-  }
 
 
 
@@ -42,6 +29,19 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
   const [validEmail, setValidEmail] = useState(false)
   const [validDirection, setValidDirection] = useState(false)
 
+
+  const onSubmit = (event) => {
+    setDataUser(() => ({
+      names: names,
+      surnames: surnames,
+      email: email,
+      phone: phone,
+      address: address,
+      DPI: DPI,
+      tutor: tutor,
+    }))
+  }
+  
 
   return (
     <>
@@ -59,18 +59,21 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
           value={dataUser.names}
           onChange={(event) => {
             setDataUser({ ...dataUser, names: event.target.value })
-            if (dataUser.names.length <= 1) {
-              setErrorMessageName("Este parámetro es obligatorio y debe de contener más de 3 caracteres")
+            if (dataUser.names.length < 3) {
+              setErrorMessageName("Este parámetro es obligatorio y debe de tener más de 3 caracteres")
               setValidName(true)
+              setPagina1("/step1")
             } else {
               setErrorMessageName("")
               setValidName(false)
+              setPagina1("/step2")  
             }
           }
           }
           name="names"
           error={validName}
           helperText={errorMessageName}
+          if
         />
 
 
@@ -92,12 +95,15 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
           value={dataUser.email}
           onChange={(event) => {
             setDataUser({ ...dataUser, email: event.target.value })
-            if (dataUser.email.length <= 1) {
-              setErrorMessageEmail("Este parámetro es obligatorio y debe de contener más de 3 caracteres")
+            if (dataUser.email.length < 3) {
+              setErrorMessageEmail("Este parámetro es obligatorio y debe de tener más de 3 caracteres")
               setValidEmail(true)
+              setPagina1("/step1") 
+              
             } else {
               setErrorMessageEmail("")
               setValidEmail(false)
+              setPagina1("/step2") 
             }
           }
           }
@@ -122,12 +128,14 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
           value={dataUser.address}
           onChange={(event) => {
             setDataUser({ ...dataUser, address: event.target.value })
-            if (dataUser.address.length <= 1) {
-              setErrorMessageDirection("Este parámetro es obligatorio y debe de contener más de 3 caracteres")
+            if (dataUser.address.length < 3) {
+              setErrorMessageDirection("Este parámetro es obligatorio y debe de tener más de 3 caracteres")
               setValidDirection(true)
+              setPagina1("/step1") 
             } else {
               setErrorMessageDirection("")
               setValidDirection(false)
+              setPagina1("/step2") 
             }
           }
           }
@@ -146,13 +154,12 @@ export const PageStep1 = ({ dataUser, setDataUser }) => {
         <TextField item sx={{ mb: 3 }}
           label="Tutor legal/Encargad@"
           type="text"
-          className=" input1"
-          
+          className=" input1"          
           value={dataUser.tutor} onChange={(event) => setDataUser({ ...dataUser, tutor: event.target.value })}
           name="tutor" />
 
 
-        <Link to="/step2" type='submit' className="form__submit">Siguiente</Link>
+        <Link to={pagina1} type='submit' className="form__submit">Siguiente</Link>
       </form>
 
 

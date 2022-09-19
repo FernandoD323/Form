@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
 import { TextField } from '@mui/material';
 
-export const PageStep4 = ({ dataExpenses, setDataExpenses }) => {
+export const PageStep4 = ({ dataExpenses,pagina4,setPagina4, setDataExpenses }) => {
   const { light, water, food, tuition } = useForm({
     light: '',
     water: '',
@@ -46,9 +46,11 @@ export const PageStep4 = ({ dataExpenses, setDataExpenses }) => {
           if (dataExpenses.light.length <= 1) {
             setErrorMessageLight("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
             setValidLight(true)
+            setPagina4("/step4")
           } else {
             setErrorMessageLight("")
             setValidLight(false)
+            setPagina4("/step5")  
           }
         }}
         error={validLight}
@@ -66,9 +68,11 @@ export const PageStep4 = ({ dataExpenses, setDataExpenses }) => {
           if (dataExpenses.water.length <= 1) {
             setErrorMessageWater("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
             setValidWater(true)
+            setPagina4("/step4")
           } else {
             setErrorMessageWater("")
             setValidWater(false)
+            setPagina4("/step5")  
           }
         }}
         error={validWater}
@@ -87,9 +91,11 @@ export const PageStep4 = ({ dataExpenses, setDataExpenses }) => {
           if (dataExpenses.food.length <= 1) {
             setErrorMessageFood("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
             setValidFood(true)
+            setPagina4("/step4")  
           } else {
             setErrorMessageFood("")
             setValidFood(false)
+            setPagina4("/step5")  
           }
         }}
         error={validFood}
@@ -107,9 +113,11 @@ export const PageStep4 = ({ dataExpenses, setDataExpenses }) => {
           if (dataExpenses.tuition.length <= 1) {
             setErrorMessageTuiton("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
             setValidTuiton(true)
+            setPagina4("/step4")  
           } else {
             setErrorMessageTuiton("")
             setValidTuiton(false)
+            setPagina4("/step5")  
           }
         }}
         error={validTuiton}
@@ -117,7 +125,7 @@ export const PageStep4 = ({ dataExpenses, setDataExpenses }) => {
         name="tuition" />
 
       <Link to="/step3" className="form__submit" >Atras</Link>
-      <Link to="/step5" type='submit' className="form__submit" >Siguiente</Link>
+      <Link to={pagina4} type='submit' className="form__submit" >Siguiente</Link>
     </form>
   )
 }
