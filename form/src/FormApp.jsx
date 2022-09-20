@@ -10,10 +10,7 @@ const [dataExpenses, setDataExpenses] = useState({})
 
 const [pagina1, setPagina1] = useState("/step1")
 const [pagina4, setPagina4] = useState("/step4")
-
-console.log(dataUser)
-console.log(dataFamily)
-console.log(dataExpenses)
+const [isDisable, setIsDisable] = useState("form__submit--disable")
 
 
   return (
@@ -26,6 +23,8 @@ console.log(dataExpenses)
       dataExpenses={dataExpenses} setDataExpenses={setDataExpenses}
       pagina1={pagina1} setPagina1={setPagina1}
       pagina4={pagina4} setPagina4={setPagina4}
+      isDisable={isDisable} setIsDisableUser={setIsDisable}
+
       />      
       </>
       

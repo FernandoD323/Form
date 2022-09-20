@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
 import { TextField } from '@mui/material';
+// import { number } from 'prop-types';
 
-export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
+export const PageStep1 = ({ isDisable,setIsDisable, pagina1,setPagina1,dataUser, setDataUser }) => {
 
 
   const { names, surnames, email, phone, address, DPI, tutor } = useForm({
@@ -63,10 +64,12 @@ export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
               setErrorMessageName("Este parámetro es obligatorio y debe de tener más de 3 caracteres")
               setValidName(true)
               setPagina1("/step1")
+              setIsDisable("form__submit--disable")
             } else {
               setErrorMessageName("")
               setValidName(false)
               setPagina1("/step2")  
+              setIsDisable("form__submit")
             }
           }
           }
@@ -80,7 +83,7 @@ export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
         <TextField
           label="Apellidos"
           type="text"
-          className=" input"
+          className="input"
 
           value={dataUser.surnames}
           onChange={(event) => setDataUser({ ...dataUser, surnames: event.target.value })}
@@ -90,7 +93,7 @@ export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
         <TextField item sx={{ mb: 2,mr:4 }}
           label="Correo"
           type="text"
-          className=" input"
+          className="input"
 
           value={dataUser.email}
           onChange={(event) => {
@@ -113,9 +116,8 @@ export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
 
         <TextField
           label="Teléfono"
-          type="text"
-          className=" input"
-          
+          inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} 
+          className=" input"  
           value={dataUser.phone}
           onChange={(event) => setDataUser({ ...dataUser, phone: event.target.value })}
           name="phone" />
@@ -123,7 +125,7 @@ export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
         <TextField item sx={{ mb: 2,mr:4 }}
           label="Dirección"
           type="text"
-          className=" input"
+          className="input"
           
           value={dataUser.address}
           onChange={(event) => {
@@ -159,7 +161,7 @@ export const PageStep1 = ({pagina1,setPagina1,dataUser, setDataUser }) => {
           name="tutor" />
 
 
-        <Link to={pagina1} type='submit' className="form__submit">Siguiente</Link>
+        <Link to={pagina1} type='submit' className={isDisable}>Siguiente</Link>
       </form>
 
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
 import { TextField } from '@mui/material';
 
-export const PageStep4 = ({ dataExpenses,pagina4,setPagina4, setDataExpenses }) => {
+export const PageStep4 = ({  dataExpenses,pagina4,setPagina4, setDataExpenses }) => {
   const { light, water, food, tuition } = useForm({
     light: '',
     water: '',
@@ -47,10 +47,12 @@ export const PageStep4 = ({ dataExpenses,pagina4,setPagina4, setDataExpenses }) 
             setErrorMessageLight("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
             setValidLight(true)
             setPagina4("/step4")
+            // setIsDisableExpenses("form__submit--disable")
           } else {
             setErrorMessageLight("")
             setValidLight(false)
             setPagina4("/step5")  
+            // setIsDisableExpenses("form__submit")
           }
         }}
         error={validLight}
@@ -125,7 +127,7 @@ export const PageStep4 = ({ dataExpenses,pagina4,setPagina4, setDataExpenses }) 
         name="tuition" />
 
       <Link to="/step3" className="form__submit" >Atras</Link>
-      <Link to={pagina4} type='submit' className="form__submit" >Siguiente</Link>
+      <Link to={pagina4} type='submit' className >Siguiente</Link>
     </form>
   )
 }

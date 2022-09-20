@@ -98,7 +98,21 @@ body{
   color: #fff;
   font-weight: 700;
   cursor: pointer;
-  margin-right: 5%;
+  margin-right: 5% ;
+  text-decoration: none;
+}
+
+.form__submit--disable{
+  display: inline-block;
+  width: 30%;
+  font-size: 18px;
+  background-image: linear-gradient(135deg, #f87c7c 0%, #ffbc85 100%);
+  opacity: 35%;
+  padding: 15px 30px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: not-allowed;
   text-decoration: none;
 }
 
@@ -172,6 +186,8 @@ nav{
   margin: 12px 25% 30px 25%;
     
 }
+
+
 
 @media screen and (max-width:800px){
 
@@ -540,10 +556,23 @@ h3{
 
 
 
-@media screen and (max-width:1281px){
+@media screen and (min-width:1280px){
   
   .links{
     margin-left: 90px;
+ 
+    
+  }
+
+  
+
+}
+
+
+@media screen and (min-width:1440px){
+  
+  .links{
+    margin-left: 110px;
  
     
   }
