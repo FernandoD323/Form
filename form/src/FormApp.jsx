@@ -12,6 +12,8 @@ const [pagina1, setPagina1] = useState("/step1")
 const [pagina4, setPagina4] = useState("/step4")
 const [isDisable, setIsDisable] = useState("form__submit--disable")
 
+const [isDisableExpenses, setIsDisableExpenses] = useState("form__submit--disable")
+
 
   return (
 
@@ -23,7 +25,9 @@ const [isDisable, setIsDisable] = useState("form__submit--disable")
       dataExpenses={dataExpenses} setDataExpenses={setDataExpenses}
       pagina1={pagina1} setPagina1={setPagina1}
       pagina4={pagina4} setPagina4={setPagina4}
-      isDisable={isDisable} setIsDisableUser={setIsDisable}
+      isDisable={isDisable} setIsDisable={setIsDisable}
+
+      isDisableExpenses={isDisableExpenses} setIsDisableExpenses={setIsDisableExpenses}
 
       />      
       </>

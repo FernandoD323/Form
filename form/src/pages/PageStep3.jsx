@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useForm } from '../hooks/useForm';
-import { TextField } from '@mui/material';
+import { InputAdornment, TextField } from '@mui/material';
 export const PageStep3 = ({ dataIncome, setDataIncome }) => {
 
   const { incomeM, incomeF, incomeB, moreI } = useForm({
@@ -28,39 +28,47 @@ export const PageStep3 = ({ dataIncome, setDataIncome }) => {
     <form className="form img3">
       <h2 className="form__title"> - Ingresos - </h2>
       <hr className='form__hr' />
-      <TextField item sx={{ mb: 2,mr:4 }}
+      <TextField item sx={{ mb: 5,mr:4 }}
         label="Ingresos totales de la Madre"
         type="text"
         className=" input"
-        
+        InputProps={{
+          startAdornment:<InputAdornment position="start">Q</InputAdornment>,
+        }}
         value={dataIncome.incomeM}
-        onChange={(event) => setDataIncome({ ...dataIncome, incomeM: event.target.value })}
+        onChange={(event) => setDataIncome({ ...dataIncome, incomeM: event.target.value.replace(/\D/g, '') })}
         name="incomeM" />
 
       <TextField 
         label="Ingresos totales del Padre"
         type="email"
         className=" input"
-        
+        InputProps={{
+          startAdornment:<InputAdornment position="start">Q</InputAdornment>,
+        }}
         value={dataIncome.incomeF}
-        onChange={(event) => setDataIncome({ ...dataIncome, incomeF: event.target.value })}
+        onChange={(event) => setDataIncome({ ...dataIncome, incomeF: event.target.value.replace(/\D/g, '') })}
         name="incomeF" />
 
-      <TextField item sx={{ mb: 3}}
+      <TextField item sx={{ mb: 5}}
         label="Ingresos totales de los hermanos"
         type="email"
         className=" input1"
-        
+        InputProps={{
+          startAdornment:<InputAdornment position="start">Q</InputAdornment>,
+        }}
         value={dataIncome.incomeB}
-        onChange={(event) => setDataIncome({ ...dataIncome, incomeB: event.target.value })}
+        onChange={(event) => setDataIncome({ ...dataIncome, incomeB: event.target.value.replace(/\D/g, '') })}
         name="incomeB" />
 
-      <TextField item sx={{ mb: 3}}
+      <TextField item sx={{ mb: 5}}
         label="Otro tipo de ingresos familiares"
         className=" input1"
-        
+        InputProps={{
+          startAdornment:<InputAdornment position="start">Q</InputAdornment>,
+        }}
         value={dataIncome.moreI}
-        onChange={(event) => setDataIncome({ ...dataIncome, moreI: event.target.value })}
+        onChange={(event) => setDataIncome({ ...dataIncome, moreI: event.target.value.replace(/\D/g, '') })}
         name="moreI"/>
 
       <Link to="/step2" className="form__submit" >Atras</Link>

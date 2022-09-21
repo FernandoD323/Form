@@ -87,8 +87,7 @@ export const PageStep2 = ({ dataFamily, setDataFamily }) => {
         label="¿Cuántos Herman@s Tiene?"
         type="text"
         className="input1"
-        
-        value={dataFamily.brothers} onChange={(event) => setDataFamily({ ...dataFamily, brothers: event.target.value })}
+        value={dataFamily.brothers} onChange={(event) => setDataFamily({ ...dataFamily, brothers: event.target.value.replace(/\D/g, '') })}
         name="brothers" />
 
       {/* <input type="submit" value="Atras" class="form__submit"/>

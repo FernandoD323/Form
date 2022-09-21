@@ -87,7 +87,6 @@ body{
 }
 
 
-
 .form__submit{
   display: inline-block;
   width: 30%;
@@ -101,6 +100,7 @@ body{
   margin-right: 5% ;
   text-decoration: none;
 }
+
 
 .form__submit--disable{
   display: inline-block;
