@@ -43,7 +43,7 @@ export const Answers = ({dataUser,dataExpenses,dataIncome,dataFamily}) => {
             <h3> Luz: Q{dataExpenses.light}</h3>
             <h3> Canasta Básica: Q{dataExpenses.food}</h3>
             <h3> Colegiatura: Q{dataExpenses.tuition}</h3>
-            <h3> Total de Gastos: Q{ parseInt(dataExpenses.light) + parseInt(dataExpenses.water ) + parseInt(dataExpenses.food) + parseInt(dataExpenses.tuition)}</h3>
+            {/* <h3> Total de Gastos: Q{ parseInt(dataExpenses.light) + parseInt(dataExpenses.water ) + parseInt(dataExpenses.food) + parseInt(dataExpenses.tuition)}</h3> */}
             <Link to="/step4" className="form__submitA" >¡Editar!</Link>
             <hr className='form__hr'/>
 
