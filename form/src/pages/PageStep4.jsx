@@ -40,25 +40,41 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         label="Luz"
         className="input"
         value={dataExpenses.light}
+        required
         InputProps={{
           startAdornment:<InputAdornment position="start">Q</InputAdornment>,
         }}
         onChange={(event) =>  {
-          setDataExpenses({ ...dataExpenses, light: event.target.value.replace(/\D/g, '') })
-          if (dataExpenses.light.length>=0) {
+          setDataExpenses({ ...dataExpenses, light: event.target.value.replace(/(?!-)[^0-9.]/g, '') })
+          if (dataExpenses.light.length>1) {
             setErrorMessageLight("")
             setValidLight(false)
             setPagina4("/step5")  
             setIsDisableExpenses("form__submit")
           } else {
 
-            setErrorMessageLight("Este parámetro debe ser un número")
-            setValidLight(true)
+            setErrorMessageLight("Este parámetro debe ser un número y es obligatorio, puede incluir 2 decimales")
+            setValidLight(false)
             setPagina4("/step4")  
             setIsDisableExpenses("form__submit--disable") 
  
           }
-        }}
+          if(dataExpenses.light.includes("-")){
+            setErrorMessageLight("Ingrese un número válido por favor")
+            setValidLight(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }
+          if(dataExpenses.light.includes("..")){
+            setErrorMessageLight("Ingrese un número válido por favor")
+            setValidLight(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }
+         
+          
+        }
+      }
         error={validLight}
         helperText={errorMessageLight}
         name="light" />
@@ -67,24 +83,38 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         label="Agua"
         type="text"
         className="input"
+        required
         InputProps={{
           startAdornment:<InputAdornment position="start">Q</InputAdornment>,
         }}
         value={dataExpenses.water}
         onChange={(event) =>  {
-          setDataExpenses({ ...dataExpenses, water: event.target.value.replace(/\D/g, '') })
-          if (dataExpenses.water.length <= 1) {
-            setErrorMessageWater("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
-            setValidWater(true)
-            setPagina4("/step4")
-            setIsDisableExpenses("form__submit--disable") 
-          } else {
+          setDataExpenses({ ...dataExpenses, water: event.target.value.replace(/(?!-)[^0-9.]/g, '') })
+          if (dataExpenses.water.length>1) {
             setErrorMessageWater("")
             setValidWater(false)
             setPagina4("/step5")  
             setIsDisableExpenses("form__submit")
+          } else {
+
+            setErrorMessageWater("Este parámetro debe ser un número y es obligatorio, puede incluir 2 decimales")
+            setValidWater(false)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+ 
           }
-        }}
+          if(dataExpenses.water.includes("-")){
+            setErrorMessageWater("Ingrese un número válido por favor")
+            setValidWater(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }
+          if(dataExpenses.water.includes("..")){
+            setErrorMessageWater("Ingrese un número válido por favor")
+            setValidWater(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }}}
         error={validWater}
         helperText={errorMessageWater}
         name="water" 
@@ -94,24 +124,38 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         label="Alimentación"
         type="text"
         className="input"
+        required
         InputProps={{
           startAdornment:<InputAdornment position="start">Q</InputAdornment>,
         }}
         value={dataExpenses.food}
         onChange={(event) =>  {
-          setDataExpenses({ ...dataExpenses, food: event.target.value.replace(/\D/g, '') })
-          if (dataExpenses.food.length <= 1) {
-            setErrorMessageFood("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
-            setValidFood(true)
-            setPagina4("/step4")  
-            setIsDisableExpenses("form__submit--disable") 
-          } else {
+          setDataExpenses({ ...dataExpenses, food: event.target.value.replace(/(?!-)[^0-9.]/g, '') })
+          if (dataExpenses.food.length>1) {
             setErrorMessageFood("")
             setValidFood(false)
             setPagina4("/step5")  
             setIsDisableExpenses("form__submit")
+          } else {
+
+            setErrorMessageFood("Este parámetro debe ser un número y es obligatorio, puede incluir 2 decimales")
+            setValidFood(false)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+ 
           }
-        }}
+          if(dataExpenses.food.includes("-")){
+            setErrorMessageFood("Ingrese un número válido por favor")
+            setValidFood(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }
+          if(dataExpenses.food.includes("..")){
+            setErrorMessageFood("Ingrese un número válido por favor")
+            setValidFood(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }}}
         error={validFood}
         helperText={errorMessageFood}
         name="food" />
@@ -120,24 +164,38 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         label="Colegiatura"
         type="text"
         className="input"
+        required
         InputProps={{
           startAdornment:<InputAdornment position="start">Q</InputAdornment>,
         }}
         value={dataExpenses.tuition}
         onChange={(event) =>  {
-          setDataExpenses({ ...dataExpenses, tuition: event.target.value.replace(/\D/g, '') })
-          if (dataExpenses.tuition.length <= 1) {
-            setErrorMessageTuiton("Este parámetro es obligatorio, debe ser un número con terminación de 2 decimales")
-            setValidTuiton(true)
-            setPagina4("/step4")  
-            setIsDisableExpenses("form__submit--disable") 
-          } else {
+          setDataExpenses({ ...dataExpenses, tuition: event.target.value.replace(/(?!-)[^0-9.]/g, '') })
+          if (dataExpenses.tuition.length>1) {
             setErrorMessageTuiton("")
             setValidTuiton(false)
             setPagina4("/step5")  
             setIsDisableExpenses("form__submit")
+          } else {
+
+            setErrorMessageTuiton("Este parámetro debe ser un número y es obligatorio, puede incluir 2 decimales")
+            setValidTuiton(false)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+ 
           }
-        }}
+          if(dataExpenses.tuition.includes("-")){
+            setErrorMessageTuiton("Ingrese un número válido por favor")
+            setValidTuiton(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }
+          if(dataExpenses.tuition.includes("..")){
+            setErrorMessageTuiton("Ingrese un número válido por favor")
+            setValidTuiton(true)
+            setPagina4("/step4")  
+            setIsDisableExpenses("form__submit--disable") 
+          }}}
         error={validTuiton}
         helperText={errorMessageTuiton}
         name="tuition" />
