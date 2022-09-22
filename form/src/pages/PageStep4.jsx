@@ -71,8 +71,6 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
             setPagina4("/step4")  
             setIsDisableExpenses("form__submit--disable") 
           }
-         
-          
         }
       }
         error={validLight}
@@ -177,7 +175,6 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
             setPagina4("/step5")  
             setIsDisableExpenses("form__submit")
           } else {
-
             setErrorMessageTuiton("Este parámetro debe ser un número y es obligatorio, puede incluir 2 decimales")
             setValidTuiton(false)
             setPagina4("/step4")  

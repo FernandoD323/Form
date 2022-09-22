@@ -21,7 +21,7 @@ export const AppRouter = ({isDisableExpenses,setIsDisableExpenses,isDisable,setI
         <Route path="step3" element={<PageStep3 dataIncome={dataIncome} setDataIncome={setDataIncome}/>} />
         <Route path="step4" element={<PageStep4 isDisableExpenses={isDisableExpenses} setIsDisableExpenses={setIsDisableExpenses} dataExpenses={dataExpenses} setDataExpenses={setDataExpenses} pagina4={pagina4} setPagina4 ={setPagina4}/>} />
         <Route path="step5" element={<PageStep5 />} />
-        <Route path="answers" element={<Answers dataUser={dataUser} dataFamily={dataFamily} dataExpenses={dataExpenses}/>} />
+        <Route path="answers" element={<Answers dataUser={dataUser} dataFamily={dataFamily} dataIncome={dataIncome}  dataExpenses={dataExpenses}/>} />
       </Routes>
 
     </>
