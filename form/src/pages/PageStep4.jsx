@@ -36,7 +36,7 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
     <form onSubmit={onSubmit} class="form img4">
       <h2 class="form__title"> - Gastos Mensuales - </h2>
       <hr className='form__hr' />
-      <TextField  item sx={{ mb: 4,mr:4 }}
+      <TextField  item sx={{ mb: 3,mr:4 }}
         label="Luz"
         className="input"
         value={dataExpenses.light}
@@ -77,7 +77,7 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         helperText={errorMessageLight}
         name="light" />
 
-      <TextField
+      <TextField item sx={{ mb: 3}}
         label="Agua"
         type="text"
         className="input"
@@ -118,7 +118,7 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         name="water" 
         />
 
-      <TextField  item sx={{ mb: 4,mr:4 }}
+      <TextField  item sx={{ mb: 3,mr:4 }}
         label="Alimentación"
         type="text"
         className="input"
@@ -158,7 +158,7 @@ export const PageStep4 = ({  setIsDisableExpenses, isDisableExpenses, dataExpens
         helperText={errorMessageFood}
         name="food" />
 
-      <TextField
+      <TextField item sx={{ mb: 3}}
         label="Colegiatura"
         type="text"
         className="input"

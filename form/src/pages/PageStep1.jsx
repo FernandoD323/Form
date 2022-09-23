@@ -88,11 +88,10 @@ export const PageStep1 = ({ isDisable, setIsDisable, pagina1, setPagina1, dataUs
         />
 
 
-        <TextField
+        <TextField item sx={{ mb: 2 }}
           label="Apellidos"
           type="text"
           className="input"
-
           value={dataUser.surnames}
           onChange={(event) => setDataUser({ ...dataUser, surnames: event.target.value })}
           name="surnames" />
@@ -125,7 +124,7 @@ export const PageStep1 = ({ isDisable, setIsDisable, pagina1, setPagina1, dataUs
           helperText={errorMessageEmail}
         />
 
-        <TextField
+        <TextField item sx={{ mb: 2}}
           label="Teléfono"
           className=" input"
           value={dataUser.phone}
@@ -171,7 +170,7 @@ export const PageStep1 = ({ isDisable, setIsDisable, pagina1, setPagina1, dataUs
           helperText={errorMessageDirection}
           name="address" />
 
-        <TextField
+        <TextField item sx={{ mb: 2}}
           label="DPI"
           type="text"
           className="input"

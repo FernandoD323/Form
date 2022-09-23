@@ -36,15 +36,15 @@ export const PageStep2 = ({ dataFamily, setDataFamily }) => {
       <hr className='form__hr' />
 
       <TextField item sx={{ mb: 2,mr:4}}
-        label="Nombres y Apellidos de la Madre"
+        label="Nombres/Apellidos Madre"
         type="text"
         className="input"
-       
+        // InputLabelProps={{style: {fontSize: 16}}}
         value={dataFamily.nameM} onChange={(event) => setDataFamily({ ...dataFamily, nameM: event.target.value })}
         name="nameM" />
 
-      <TextField
-        label="Nombres y apellidos del Padre"
+      <TextField item sx={{ mb: 2}}
+        label="Nombres/Apellidos Padre"
         type="text"
         className="input"
         
@@ -59,7 +59,7 @@ export const PageStep2 = ({ dataFamily, setDataFamily }) => {
         value={dataFamily.phoneM} onChange={(event) => setDataFamily({ ...dataFamily, phoneM: event.target.value })}
         name="phoneM" />
 
-      <TextField
+      <TextField item sx={{ mb: 2}}
         label="Teléfono del Padre"
         type="text"
         className="input"
@@ -75,7 +75,7 @@ export const PageStep2 = ({ dataFamily, setDataFamily }) => {
         value={dataFamily.workM} onChange={(event) => setDataFamily({ ...dataFamily, workM: event.target.value })}
         name="workM" />
 
-      <TextField
+      <TextField item sx={{ mb: 2}}
         label="Ocupación del Padre"
         type="text"
         className="input"
@@ -84,7 +84,7 @@ export const PageStep2 = ({ dataFamily, setDataFamily }) => {
         name="workF" />
 
       <TextField item sx={{ mb: 4 }}
-        label="¿Cuántos Herman@s Tiene?"
+        label="Cantidad de Herman@s"
         type="text"
         className="input1"
         value={dataFamily.brothers} onChange={(event) => setDataFamily({ ...dataFamily, brothers: event.target.value.replace(/\D/g, '') })}

@@ -258,19 +258,19 @@ nav {
 
 @media screen and (min-width:280px) {
   .input1 {
-    width: 95%;
+    width: 100%;
   }
-
+  
   body {
     padding: 0px 0;
   }
 
   .form__title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .input {
-    width: 42%;
+    width: 100%;
     padding: 10px 4px;
     display: inline-block;
     margin-bottom: 20px;
@@ -298,11 +298,13 @@ nav {
 
   .form {
     width: 90%;
+    margin: 35px auto;
+    margin-bottom: 50px;
   }
 
 
   .form__submit {
-    font-size: 10px;
+    font-size: 13px;
     width: 40%;
     margin-bottom: 3px;
     padding: 15px 0px;
@@ -311,7 +313,7 @@ nav {
   }
 
   .form__submit--disable {
-    font-size: 10px;
+    font-size: 13px;
     width: 40%;
     margin-bottom: 3px;
     padding: 15px 0px;
@@ -319,12 +321,7 @@ nav {
     
   }
 
-  .form {
-
-    margin: 20px auto;
-
-
-  }
+  
 
 
   .form__home {
@@ -374,7 +371,7 @@ nav {
 @media screen and (min-width:360px) {
 
   .input1 {
-    width: 95%;
+    width: 100%;
   }
 
   .form__title {
@@ -466,16 +463,45 @@ nav {
 
 
   .links {
-    font-size: 10px;
-    margin-left: 15px;
-    margin-right: 10px;
+    font-size: 12px;
+    margin-left: 9px;
+    margin-right: 25px;
   }
 
   .title {
-    font-size: 12px;
-    margin-left: 5px;
+    font-size: 14px;
+    margin-left: 15px;
   }
 
+
+}
+
+@media screen and (min-width:650px) {
+
+
+  .links {
+    font-size: 14px;
+    margin-left: 5px;
+    margin-right: 37px;
+  }
+
+  .title {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+
+  .input{
+    width: 45%;
+  }
+
+  .input1{
+    width: 96.5%;
+  }
+
+  .form {
+
+    margin: 45px auto;
+  }
 
 }
 
@@ -494,7 +520,7 @@ nav {
   }
 
   .input1 {
-    width: 90%;
+    width: 95.5%;
   }
 
   .form__submitA {
@@ -522,9 +548,6 @@ nav {
     margin-left: 8px;
   }
 
-  .input1 {
-    width: 90%;
-  }
 
   .form__submitA {
     font-size: 16px;
@@ -559,9 +582,7 @@ nav {
     margin-left: 8px;
   }
 
-  .input1 {
-    width: 90%;
-  }
+ 
 }
 
 @media screen and (min-width:912px) {
